@@ -1,0 +1,24 @@
+{
+    "title": "Mr",
+    "name": "Syed Abdul Halim",
+    "password": "password123",
+    "dob": {
+      "day": "1",
+      "month": "January",
+      "year": "1990"
+    },
+    "newsletter": true,
+    "optin": true,
+    "address": {
+      "first_name": "Syed",
+      "last_name": "Abdul Halim",
+      "company": "Cognizant",
+      "address1": "123 Main St",
+      "address2": "Apt 4B",
+      "country": "United States",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipcode": "90001",
+      "mobile_number": "1234567890"
+    }
+  }

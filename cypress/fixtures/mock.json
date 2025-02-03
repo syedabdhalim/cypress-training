@@ -1,0 +1,11 @@
+{
+    "validUser":{
+        "email": "2373250@cognizant.com",
+        "password": "password",
+        "name":"SYED ABDUL HALIM BIN SYED ADBUL RAHMAN"
+    },
+    "invalidUser":{
+        "email":"invaliduser@yahoo.com",
+        "password": "wrongpassword"
+    }
+}

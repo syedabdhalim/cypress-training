@@ -1,0 +1,2 @@
+# Cypress Training - Pipeline CI/CD
+This repository contains the CI/CD pipeline setup for the Cypress training. The pipeline automates the testing process, ensuring continuous integration and delivery of your application.
