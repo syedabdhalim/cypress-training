@@ -1,25 +1,21 @@
 /// <reference types="cypress" />
-import loginData from "../../../fixtures/login.json";
+import loginData from "../../../fixtures/mock.json";
 describe('Login Request Intercept', () => {
 
     beforeEach(() => {
         cy.visit('https://automationexercise.com/');
     })
 
-  
+    it('Should login with valid user and intercept the request', () => {
 
-
-    // it('Login and logout as valid user', () => {
-    //     cy.get('a[href="/login"]').click();
-    //     cy.contains('Login to your account').should('be.visible').then(() => {
-    //         cy.get('[data-qa="login-email"]').type(email);
-    //         cy.get('[data-qa="login-password"]').type(password);
-    //         cy.get('[data-qa="login-button"]').click();
-    //         cy.contains(`Logged in as ${name}`).should('be.visible');
-
-    //         cy.get('a[href="/logout"]').click();
-    //         cy.get('a[href="/login"]').should('exist').and('be.visible');
-    //     })
-    // })
+        cy.get("a[href='/login'").click();
+        const email = loginData.validUser.email;
+        const password = loginData.validUser.password;
+        cy.login(email, password);
+        cy.wait('@loginRequestSuccess').then((interception) =>{
+            expect(interception.response.statusCode).to.eq(302);
+            expect(interception.request.body).to.include('csrfmiddlewaretoken');
+        })
+    })
 
 })
